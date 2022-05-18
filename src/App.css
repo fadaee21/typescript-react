@@ -1,38 +1,83 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+
+/* font-family: 'Neucha', cursive; */
+
+.App{
+  width: 100vw;
+  height: 100vh;display: flex;flex-direction: column;
+  align-items: center;
+  background-color: #2f74c0;
+  font-family: 'Neucha', cursive; 
+}
+.heading {
+  text-transform: uppercase;
+  font-size: 40px;
+  margin: 30px 0;
+  color: #fff;
+  z-index: 1;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media(max-width:800px){
+  .heading{
+    margin: 15px 0;
+    font-size: 35px;
+    
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todos{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+  width: 90%;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.todos__single {
+  display: flex;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 15px;
+  background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
+  transition: 0.2s;
+}
+.todos__single:hover {
+  box-shadow: 0 0 5px black;
+  transform: scale(1.03);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.todos__single--text {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  font-size: 20px;
+}
+
+.todos__single--text:focus {
+  outline: none;
+}
+
+.icon {
+  margin-left: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .input {
+    width: 95%;
   }
-  to {
-    transform: rotate(360deg);
+  .container {
+    width: 95%;
+    flex-direction: column;
+  }
+  .todos {
+    width: 95%;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 1100px) {
+  .todos__single {
+    width: 45%;
   }
 }
