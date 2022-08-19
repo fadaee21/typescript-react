@@ -5,7 +5,6 @@ import { useAppSelector, useAppDispatch } from "../state/hooks";
 
 const BankBank: () => JSX.Element = () => {
   const { value } = useAppSelector((e: RootState) => e.bank);
-
   const dispatch = useAppDispatch();
   return (
     <div>

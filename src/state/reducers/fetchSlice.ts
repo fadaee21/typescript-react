@@ -34,5 +34,4 @@ const fetchSlice = createSlice({
 });
 
 export const { fetch } = fetchSlice.actions;
-
 export default fetchSlice.reducer;

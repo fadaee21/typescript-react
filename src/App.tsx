@@ -10,12 +10,12 @@ import { useAppDispatch, useAppSelector } from "./state/hooks";
 
 function App() {
   const dispatch = useAppDispatch();
-  const {id, isLoading} = useAppSelector((e) => e.fetch);
+  const { id, isLoading } = useAppSelector((e) => e.fetch);
 
   useEffect(() => {
     dispatch(dataFetchKon(id));
     // eslint-disable-next-line
-  }, [id]);
+  }, []);
 
   if (isLoading) {
     return (

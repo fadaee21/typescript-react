@@ -11,7 +11,6 @@ export const todoSlice = createSlice({
       reducer: (state, action: PayloadAction<Todo>): void => {
         state.push(action.payload);
       },
-
       prepare: (description: string) => ({
         payload: {
           id: Date.now(),
@@ -25,9 +24,9 @@ export const todoSlice = createSlice({
       // ! it doesn't accept without conditional because idItem could be "undefined"
       idItem && (idItem.completed = !idItem.completed);
     },
-
     removeThings: (state, action) => {
-      // ! A common mistake is to try assigning state = someValue directly. This will not work!
+      // ! A common mistake is to try assigning state = someValue directly.
+      // !   This will not work!
       return state.filter((todo) => todo.id !== action.payload);
     },
   },
